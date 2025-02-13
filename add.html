@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เพิ่ม/แก้ไข ข้อมูลไม้กายสิทธิ์</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="on.css">
+</head>
+<body>
+     
+
+    <div class="container mt-10">
+        <h2 class="text-center text-xl mb-5">เพิ่ม/แก้ไข ข้อมูลไม้กายสิทธิ์</h2>
+        <form id="productForm" class="max-w-xl mx-auto">
+            <input type="hidden" id="product_id">
+            <div class="form-control mb-4">
+                <label for="pro_name" class="label">ไม้กายสิทธิ์ของใคร</label>
+                <input type="text" id="pro_name" class="input input-bordered" required />
+            </div>
+            <div class="form-control mb-4">
+                <label for="pro_des" class="label">คำอธิบาย</label>
+                <textarea id="pro_des" class="textarea textarea-bordered" required></textarea>
+            </div>
+            <div class="form-control mb-4">
+                <label for="pro_price" class="label">ราคา(เกลเลียน)</label>
+                <input type="number" id="pro_price" class="input input-bordered" required />
+            </div>
+
+            <button type="button" class="btn btn-primary w-full" onclick="saveProduct()">บันทึกข้อมูล</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="add.js"></script>
+</body>
+</html>
